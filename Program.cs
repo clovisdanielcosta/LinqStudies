@@ -15,6 +15,24 @@
                     "ace"
                 };
 
+var listaTupleCartas = new List<(int, string)>
+{
+     ( 2, "two" ),
+     ( 3, "three"),
+     ( 4, "four"),
+     ( 5, "five"),
+     ( 4, "six"),
+     ( 7, "seven"),
+     ( 4, "eight"),
+     ( 9, "nine"),
+     ( 10, "ten"),
+     ( 10, "jack"),
+     ( 12, "queen"),
+     ( 13, "king"),
+     ( 1, "ace")
+};
+
+
 var listaCartas = new List<Carta>
 {
     new Carta( 2, "two" ),
@@ -47,7 +65,6 @@ Print(inversaoLista);
 var inversaoPalavrasNaLista = cartas.Select(c => c.Reverse().ToArray()).ToList();
 foreach (var item in inversaoPalavrasNaLista) Console.WriteLine(item);
 Console.WriteLine("----------");
-Print(inversaoPalavrasNaLista);
 
 var contains = cartas.Where(c => c.Contains("in")).ToList();
 Print(contains);
@@ -63,12 +80,17 @@ var groupedWords = words.GroupBy(word => word.Length);
 
 foreach (var item in groupedWords.OrderBy(o => o.Key))
     foreach (var word in item)
-    {
         Console.WriteLine("Lenght: " + item.Key + " | " + word);
-    }
 
-var nomeCompletoInvertido = "Clovis Daniel Costa".Select(n => n).Reverse().ToArray();
+Console.WriteLine("----------");
+
+var nome = "Clovis Daniel Costa";
+var nomeCompletoInvertido = nome.Reverse().ToArray();
 Console.WriteLine(nomeCompletoInvertido);
+Console.WriteLine("----------");
+
+var splited = nome.Split(" ");
+Print(splited);
 
 var b = "";
 
