@@ -35,4 +35,10 @@ Console.WriteLine(ReverseFullName);
 
 var splited = name.Split(" ");
 
+
+var registers = new Registers().RegisterList;
+var totalValue = registers.Sum(t => t.OperationType == 1 ? t.Value: (t.OperationType == 2 ? -t.Value: 0));
+
+
+
 var end = "";
