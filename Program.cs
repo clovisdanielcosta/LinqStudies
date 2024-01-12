@@ -84,7 +84,7 @@ foreach (var item in groupedWords.OrderBy(o => o.Key))
 
 Console.WriteLine("----------");
 
-var nome = "Clovis Daniel Costa";
+var nome = "Jones Daniel Celsari";
 var nomeCompletoInvertido = nome.Reverse().ToArray();
 Console.WriteLine(nomeCompletoInvertido);
 Console.WriteLine("----------");
@@ -101,5 +101,8 @@ void Print(IEnumerable<object> obj)
 
     Console.WriteLine(" ----------------");
 }
+
+
+
 
 public record Carta(int Posicao, string Naippe);
