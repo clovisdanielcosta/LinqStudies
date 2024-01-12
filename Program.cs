@@ -1,6 +1,6 @@
 ﻿using LinqStudies;
 
-// FILTER AND ORDER
+// Filter and Order
 
 var deck = new Deck();
 var cards = deck.Cards;
@@ -32,10 +32,18 @@ var ReverseFullName = name.Reverse().ToArray();
 Console.WriteLine(ReverseFullName);
 var splited = name.Split(" ");
 
-// CONDITIONAL SUM 
+
 
 var registers = new Registers().RegisterList;
+
+// Conditional Sum
 var totalValue = registers.Sum(t => t.OperationType == 1 ? t.Value: (t.OperationType == 2 ? -t.Value: 0));
 
 
-var end = "";
+// New distinct list of some list property, like for InputSelect options (dropdown)
+var propertyList = registers.Select(i => new { i.Description }).Distinct().OrderBy(o => o.Description).ToList();
+
+
+
+
+Console.Write($"Press any key...{Console.ReadKey()}");
